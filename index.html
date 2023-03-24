@@ -1,96 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Меню с вкладками на JavaScript2 </title>
-	<style>
-		/* Стили для меню с вкладками */
-		.tabs {
-			display: flex;
-			flex-wrap: wrap;
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-
-		.tabs li {
-			margin-right: 10px;
-		}
-
-		.tabs a {
-			display: block;
-			padding: 10px;
-			background-color: #eee;
-			color: #333;
-			text-decoration: none;
-			border-radius: 5px 5px 0 0;
-		}
-
-		.tabs a.active {
-			background-color: #fff;
-			color: #000;
-			border-bottom: 2px solid #000;
-		}
-
-		/* Стили для контента вкладок */
-		.tab-content {
-			background-color: #fff;
-			border-radius: 0 5px 5px 5px;
-			padding: 10px;
-			margin-top: -2px;
-			border: 2px solid #000;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <title>Пример кода на JavaScript</title>
 </head>
 <body>
-	<h1>Меню с вкладками на JavaScript</h1>
-
-	<ul class="tabs">
-		<li><a href="#" class="active" onclick="showTab(1);">Вкладка 1</a></li>
-		<li><a href="#" onclick="showTab(2);">Вкладка 2</a></li>
-		<li><a href="#" onclick="showTab(3);">Вкладка 3</a></li>
-	</ul>
-
-	<div class="tab-content" id="tab1">
-		<p>Содержимое первой вкладки.</p>
-	</div>
-
-	<div class="tab-content" id="tab2" style="display:none;">
-		<p>Содержимое второй вкладки.</p>
-	</div>
-
-	<div class="tab-content" id="tab3" style="display:none;">
-		<p>Содержимое третьей вкладки.</p>
-	</div>
-
-	<script>
-		function showTab(tabIndex) {
-			// Скрываем все вкладки
-			var tabContents = document.getElementsByClassName("tab-content");
-			for (var i = 0; i < tabContents.length; i++) {
-				tabContents[i].style.display = "none";
-			}
-
-			// Удаляем класс "active" у всех вкладок
-			var tabs = document.getElementsByTagName("a");
-			for (var i = 0; i < tabs.length; i++) {
-				tabs[i].classList.remove("active");
-			}
-
-			// Отображаем выбранную вкладку
-			document.getElementById("tab" + tabIndex).style.display = "block";
-
-			// Добавляем класс "active" к выбранной вкладке
-			var currentTab = document.getElementsByTagName("a")[tabIndex-1];
-			currentTab.classList.add("active");
-		}
-	</script>
-
-Прим.Ред. - Дорогие во Христе братья и сестры! Вот такие страшные знамения дает нам Господь. И это укор не столько богомерзким раскольникам ПЦУ, которые захватывают храмы УПЦ. С ними и без того всё понятно. Это знаменье нам, православным, которые своим окаянством и нераскаянностью навлекли на нашу землю эти бесовские полчища, оскверняющие нашу веру и наши святыни.
-
-Но нет покаяния, нет осознания своей виновности в происходящем у русских людей Украины, России и Белоруссии. Злоба и ненависть с обвинениями в своих скорбях и бедах всех и вся. А потому, Господь попускает и попустит еще большие несчастья, чтобы вразумить хотя бы некоторых. Господи, помилуй! 
-
-Из письма в Редакцию: "Кресты почернели на том храме, который ПЦУ-шники забрали! Мне прислала знакомая, у которой знакомая в Киеве сфотографировала и прислала."
-
+  <script>
+   
+  </script>
 </body>
 </html>
