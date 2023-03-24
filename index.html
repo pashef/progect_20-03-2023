@@ -6,7 +6,22 @@
 </head>
 <body>
   <script>
-   
+   numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '')
+   personalMovieDB = {
+    column: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: {},
+    private: "boolean"
+   }
+   ask1 = prompt('Один из последних просмотренных фильмов?', '')
+   personalMovieDB.movies = ask1
+   ask2 = prompt('На сколько оцените его?', '')
+
+   console.log(numberOfFilms)
+   console.log('Aswer question^ ', personalMovieDB.column)
+   console.log('Aswer question movies^ ', personalMovieDB.movies[0])
+
   </script>
 </body>
 </html>
