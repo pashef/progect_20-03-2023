@@ -6,17 +6,17 @@
 </head>
 <body>
   <script>
-   numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '')
-   personalMovieDB = {
+   const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '')
+   const personalMovieDB = {
     column: numberOfFilms,
     movies: {},
     actors: {},
     genres: {},
     private: "boolean"
    }
-   ask1 = prompt('Один из последних просмотренных фильмов?', '')
+   const ask1 = prompt('Один из последних просмотренных фильмов?', '')
    personalMovieDB.movies = ask1
-   ask2 = prompt('На сколько оцените его?', '')
+   const ask2 = prompt('На сколько оцените его?', '')
 
    console.log(numberOfFilms)
    console.log('Aswer question^ ', personalMovieDB.column)
