@@ -6,21 +6,34 @@
 </head>
 <body>
   <script>
+    'use strict';
    const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '')
+  // const numberOfFilms = 0
    const personalMovieDB = {
     column: numberOfFilms,
     movies: {},
     actors: {},
-    genres: {},
-    private: "boolean"
+    genres: [],
+    private: false
    }
-   const ask1 = prompt('Один из последних просмотренных фильмов?', '')
-   personalMovieDB.movies = ask1
-   const ask2 = prompt('На сколько оцените его?', '')
+   for(let i=0; i<2; i++) { 
+    let movieName = prompt('Один из последних просмотренных фильмов?', '') 
+    const movieRate = 0
+    if(movieName != '' && movieName != null) {
+      const movieRate = prompt('На сколько оцените его?', '')
+      personalMovieDB.movies[movieName] = movieRate
+      console.log("OK", "i= ", i)      
+     } else {
+      console.log('Error!!!')      
+      i--  
+      }  
+  } 
+       
+   
 
    console.log(numberOfFilms)
    console.log('Aswer question^ ', personalMovieDB.column)
-   console.log('Aswer question movies^ ', personalMovieDB.movies[0])
+   console.log('Aswer question movies^ ', personalMovieDB.movies)
 
   </script>
 </body>
