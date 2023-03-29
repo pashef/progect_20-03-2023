@@ -7,33 +7,70 @@
 <body>
   <script>
     'use strict';
-   const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '')
-  // const numberOfFilms = 0
+
+  let numberOfFilms
+
+  function start() {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')    
+  }
+
+  start()
+
    const personalMovieDB = {
     column: numberOfFilms,
     movies: {},
     actors: {},
     genres: [],
-    private: false
+    privat: false
    }
-   for(let i=0; i<2; i++) { 
+
+   function rememberMyFilms() {
+      for(let i=0; i<2; i++) { 
     let movieName = prompt('Один из последних просмотренных фильмов?', '') 
     const movieRate = 0
     if(movieName != '' && movieName != null) {
       const movieRate = prompt('На сколько оцените его?', '')
       personalMovieDB.movies[movieName] = movieRate
       console.log("OK", "i= ", i)      
-     } else {
+      } else {
       console.log('Error!!!')      
       i--  
       }  
-  } 
-       
-   
+    } 
+   }
 
-   console.log(numberOfFilms)
-   console.log('Aswer question^ ', personalMovieDB.column)
-   console.log('Aswer question movies^ ', personalMovieDB.movies)
+  //  rememberMyFilms()
+
+function directPersonalLevel() {
+  if(numberOfFilms < 10) console.log(" Вы посмотрели слишком мало фильмов ") 
+  if(numberOfFilms >=10 && numberOfFilms <30) console.log(" You areclassic user =)") 
+}
+//  directPersonalLevel()
+  
+function showMyDB() {
+  if (!personalMovieDB.privat) {
+    console.log(personalMovieDB)    
+  }  
+}
+
+showMyDB()
+  
+// Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+// "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+// genres
+
+function writeYourGeeres () {
+  
+  for(let i=1; i<=3; i++) {
+    const gen = prompt(`Ваш любимый жанр под номером ${i}. `, '')
+    personalMovieDB.genres[i-1] = gen
+  }
+}
+writeYourGeeres()
+
+
+  //  console.log('Aswer question^ ', personalMovieDB.column)
+  //  console.log('Aswer question movies^ ', personalMovieDB.movies)
 
   </script>
 </body>
